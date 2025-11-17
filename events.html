@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Events — Timely</title>
+
+  <link rel="icon" href="assets/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <img src="assets/logo.png" alt="Team logo">
+        <span class="logo-text">Timely</span>
+      </div>
+      <nav class="nav">
+        <a class="btn btn-ghost" href="index.html">Home</a>
+        <button class="btn btn-primary" id="btnNew">Create Event</button>
+      </nav>
+    </header>
+
+    <!-- Events table -->
+    <section class="card">
+      <div class="events-header">
+        <h1>Events</h1>
+        <span class="badge" id="countBadge">0 total</span>
+      </div>
+
+      <table class="table" aria-describedby="countBadge">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Date</th>
+            <th>Location</th>
+            <th style="width: 190px;">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="eventsTbody">
+          <!-- Rows will be created with JavaScript -->
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <div class="modal" id="eventModal" aria-hidden="true" role="dialog" aria-label="Create or edit event">
+    <div class="modal-content card">
+      <h2 id="modalTitle">New Event</h2>
+      <form id="eventForm" class="grid grid-2">
+        <div>
+          <label class="label" for="title">Title</label>
+          <input class="input" id="title" name="title" required placeholder="e.g., Project Demo Day">
+        </div>
+
+        <div>
+          <label class="label" for="date">Date</label>
+          <input class="input" id="date" name="date" type="date" required>
+        </div>
+
+        <div>
+          <label class="label" for="location">Location</label>
+          <input class="input" id="location" name="location" required placeholder="e.g., Room 204">
+        </div>
+
+        <div class="full-width">
+          <label class="label" for="description">Description</label>
+          <textarea class="input" id="description" name="description" rows="4" placeholder="Short description..."></textarea>
+        </div>
+
+        <!-- Hidden ID -->
+        <input type="hidden" id="id" name="id">
+
+        <div class="full-width modal-actions">
+          <button type="button" class="btn btn-ghost" id="btnCancel">Cancel</button>
+          <button type="submit" class="btn btn-primary" id="btnSave">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
