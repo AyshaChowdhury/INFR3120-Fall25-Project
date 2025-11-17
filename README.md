@@ -75,7 +75,7 @@ This file contains all the application logic and main functionality:
 1. Event Storage
 Events are stored temporarily in an in-memory JavaScript array named EVENTS.
 Each event contains:
-- id (generated using crypto.randomUUID())
+- id 
 - title
 - date
 - location
