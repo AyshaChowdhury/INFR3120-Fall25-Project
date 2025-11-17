@@ -29,11 +29,11 @@ Built with custom CSS to maintain usability across screen sizes
 **Project Structure**
 
 /Public
-|--index.html        -> Landing page with project intro and navigation
-│--events.html       -> Event dashboard + event creation/editing modal
-│--styles.css        -> Styling for layout, components, tables, modal, etc.
-│--app.js            -> JavaScript controlling CRUD logic and UI updates
-│--assets/logo.png   -> Team logo
+  |--index.html        -> Landing page with project intro and navigation
+  │--events.html       -> Event dashboard + event creation/editing modal
+  │--styles.css        -> Styling for layout, components, tables, modal, etc.
+  │--app.js            -> JavaScript controlling CRUD logic and UI updates
+  │--assets/logo.png   -> Team logo
 
 
 **File Explanation**
@@ -108,7 +108,6 @@ Each event contains:
   - URL query ?new=1 to auto-open the form on page load
  
 **Technology Used**
-Technology Used:
 - HTML5 – Structure and layout
 - CSS3 – Custom styling and responsive design
 - JavaScript – Application logic, DOM manipulation
